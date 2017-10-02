@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "940243336270",
+    "firebase_url": "https://rnn-example-1.firebaseio.com",
+    "project_id": "rnn-example-1",
+    "storage_bucket": "rnn-example-1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:940243336270:android:064dc2dfb77cad93",
+        "android_client_info": {
+          "package_name": "com.reactnativenotificationsexample"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "940243336270-2s8n7i516obhperil7p0jbo3vrecvqg6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBZCw7OpseJMu0a6uEv97T8lVfDd81BdUU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
