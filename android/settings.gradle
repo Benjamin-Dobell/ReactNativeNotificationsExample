@@ -1,0 +1,3 @@
+rootProject.name = 'ReactNativeNotificationsExample'
+
+include ':app'
