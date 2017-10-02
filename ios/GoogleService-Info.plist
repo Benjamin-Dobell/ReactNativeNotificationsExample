@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>940243336270-ntioqemrtqu7dhk0jbq8f63408mm8evv.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.940243336270-ntioqemrtqu7dhk0jbq8f63408mm8evv</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBQjow0pB8e2hKpzVQkP7RijjEe27zrQuA</string>
+	<key>GCM_SENDER_ID</key>
+	<string>940243336270</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>org.reactjs.native.example.ReactNativeNotificationsExample1</string>
+	<key>PROJECT_ID</key>
+	<string>rnn-example-1</string>
+	<key>STORAGE_BUCKET</key>
+	<string>rnn-example-1.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true></true>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false></false>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:940243336270:ios:7b3fb5220913a955</string>
+	<key>DATABASE_URL</key>
+	<string>https://rnn-example-1.firebaseio.com</string>
+</dict>
+</plist>

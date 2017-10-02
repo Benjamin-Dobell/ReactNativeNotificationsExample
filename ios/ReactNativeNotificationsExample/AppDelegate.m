@@ -7,6 +7,10 @@
  * of patent rights can be found in the PATENTS file in the same directory.
  */
 
+@import FirebaseCore;
+@import FirebaseInstanceID;
+@import FirebaseMessaging;
+
 #import "AppDelegate.h"
 
 #import <React/RCTBundleURLProvider.h>
@@ -14,10 +18,16 @@
 
 #import "RNNotifications.h"
 
+@interface AppDelegate () <FIRMessagingDelegate>
+@end
+
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+  [FIRApp configure];
+  [[FIRMessaging messaging] setDelegate:self];
+  
   NSURL *jsCodeLocation;
 
   jsCodeLocation = [[RCTBundleURLProvider sharedSettings] jsBundleURLForBundleRoot:@"index.ios" fallbackResource:nil];
@@ -43,20 +53,27 @@
 
 - (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
 {
-  [RNNotifications didRegisterForRemoteNotificationsWithDeviceToken:deviceToken];
+  [[FIRInstanceID instanceID] setAPNSToken:deviceToken type:FIRInstanceIDAPNSTokenTypeSandbox];
 }
 
 - (void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error {
   [RNNotifications didFailToRegisterForRemoteNotificationsWithError:error];
 }
 
-- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)notification {
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)notification
+{
+  [[FIRMessaging messaging] appDidReceiveMessage:notification];
   [RNNotifications didReceiveRemoteNotification:notification];
 }
 
 - (void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification
 {
   [RNNotifications didReceiveLocalNotification:notification];
+}
+
+- (void)messaging:(nonnull FIRMessaging *)messaging didRefreshRegistrationToken:(nonnull NSString *)fcmToken
+{
+  [RNNotifications didRegisterForRemoteNotificationsWithDeviceToken:fcmToken];
 }
 
 @end
